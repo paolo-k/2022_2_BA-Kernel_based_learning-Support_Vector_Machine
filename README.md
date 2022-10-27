@@ -12,7 +12,7 @@ Support Vector Machine(이하 SVM)은 이름이 참 직관적이지 않다. Mach
 ![structural_risk](https://user-images.githubusercontent.com/106015570/198205512-0146f627-3790-4e66-8fa5-1a1ead44554e.png)
 
 
-인공신경망, 의사결정나무, 로지스틱 회귀분석 등의 예측 및 분류 기법들은 
+인공신경망, 의사결정나무, 로지스틱 회귀분석 등의 예측 및 분류 기법들은 (아직 미완성)
 
 ## 분류기로서 SVM
 
