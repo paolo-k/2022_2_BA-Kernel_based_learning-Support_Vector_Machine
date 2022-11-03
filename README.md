@@ -32,7 +32,7 @@ Support Vector Machine의 가장 큰 특징 중 하나는, global optimum이 확
 
 SVM은 선형 분류면으로 분류가 가능한지 여부(linearly separable, linearly non-separable)와, 오분류 감수 여부(hard margin, soft margin)에 따라 4가지 case를 가진다. linearly non-separable인 경우는 Kernel Trick을 통해 고차원 공간 상에서 각 vector 간 내적을 구한 후, 이에 기반하여 비선형 분류기를 생성한다. soft margin을 적용해야하는 경우는 오분류에 대하여 penalty를 부과하여 해결한다.
 
-|분류|hard margin||
+|분류|hard margin|soft margin|
 |------|---|---|
 |linear|basic|오분류비용 도입|
 |nonlinear|커널 트릭 적용|오분류비용 + 커널 트릭|
@@ -122,8 +122,17 @@ c가 높을수록 정분류율이 높아지는 것을 확인할 수 있다. 일�
 
 최적의 hyperparameter를 적용한 nonlinear SVM의 성능을 비교하기 위하여, 널리 쓰이는 분류 방법론인 logistic regression와 비교해보았다. 아래 사진은 두 방법론의 결과를 비교한 것으로, 위가 SVM, 밑이 logistic regression 적용 결과이다. 전반적인 정분류율은 SVM 쪽이 더 뛰어나며, class 1에 대한 정분류율에서만 logistic regression이 미세하게 좋은 성능을 보인다.
 
-<img width="209" alt="compare_svm_log" src="https://user-images.githubusercontent.com/106015570/199739047-46bdd17b-0a27-470b-829b-d601f342543c.png">
+![confusion_gaussian_optimal](https://user-images.githubusercontent.com/106015570/199742735-85b95efa-9103-42b1-ac50-560e6ab76f87.png)
+![confusion_logistic](https://user-images.githubusercontent.com/106015570/199742798-9c628386-392a-4578-a1b5-db7ae1600da6.png)
 
+
+# conclusion
+
+## 결과의 분석 및 해석
+본 튜토리얼의 결과, 모델링된 gaussian kernel SVM은 testing set에 대하여 거의 완벽에 가까운 정분류율을 보인다. 그 원인으로는 아래의 2가지를 꼽을 수 있다.
+(1) 최적의 파라미터 탐색 : gaussian kernel의 경우 grid search를 이용하여 최적의 파라미터를 자동으로 구했다. 단순히 manual한 방법으로 일관했다면, 최적의 파라미터를 찾기 어려웠을 것이라 판단된다.
+(2) 데이터셋의 편리성 : 3차원에 시각화된 분포에서 파악할 수 있듯, 분석에 사용된 데이터셋은 집단 구분이 명확했다. 이 때문에 모델 성능이 특히 잘 나온 것으로 추정된다.
+다만, 같은 데이터셋을 적용한 로지스틱 회귀분석에서 성능이 비교적 낮았던 점을 고려하면, SVM의 성능이 로지스틱 회귀분석보다 더 좋게 나타난 것이라 판단할 수 있다.
 
 ## 의의 및 보완점
 
