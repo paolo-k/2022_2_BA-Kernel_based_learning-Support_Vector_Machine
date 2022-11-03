@@ -15,7 +15,7 @@ SVM은 Loss function에 의하여 측정되는 정확도만 고려하지 않고,
 
 ![image](https://user-images.githubusercontent.com/106015570/199633310-d358d30f-78f5-4921-ab48-1eee2fe3aa77.png)
 
-위 그림은 고려대학교 강필성 교수님께서 제작하신 Business Analytics 수업 자료 일부를 발췌한 것이다. 그림에서 알 수 있듯, Margin이 넓은 hyperplane은 고려할 수 있는 경계면의 수를 줄인다. 즉, Margin의 최대화는 구조적 위험을 최소화한다. 
+위 그림은 고려대학교 강필성 교수님께서 제작하신 Business Analytics 수업 자료 일부를 발췌한 것이다. 그림에서 알 수 있듯, Margin이 넓은 hyperplane은 고려할 수 있는 경계면의 수를 줄인다. 즉, Margin의 최대화는 모델의 복잡도를 줄임으로써, 구조적 위험을 최소화한다. 
 
 2. Global optimal 보장
 
