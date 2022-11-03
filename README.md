@@ -23,7 +23,7 @@ SVM은 Loss function에 의하여 측정되는 정확도만 고려하지 않고,
 
 Support Vector Machine의 가장 큰 특징 중 하나는, global optimum이 확실하게 보장된다는 것이다. 보통의 Neural Network 기반의 방법은 local optimum이 곧 global optimum임을 보장할 수 없다. 그에 비해, Support Vector Machine은 후술하겠지만 목적식이 2차식인 만큼, global optimum을 보장할 수 있다.
 
-<img src="https://user-images.githubusercontent.com/106015570/199642662-f51cec66-45df-4c0f-bb97-c02492573b2b.png.png" width="200" height="400"/>
+<tutorial_2_ML_escape src="https://user-images.githubusercontent.com/106015570/199642662-f51cec66-45df-4c0f-bb97-c02492573b2b.png.png" width="200" height="400"/>
 
 (그러나 연구가 더 진행되면서, local optimum의 경우 대체로 다른 차원을 통해 빠져나감으로써, 결국 global optimum에 수렴한다는 사실이 밝혀졌다. )
 
