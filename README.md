@@ -6,6 +6,7 @@ Tutorial Homework 2(Business Analytics class in Industrial &amp; Management Engi
 Support Vector Machine(이하 SVM)은 이름이 직관적이지 않다. Machine이라고 하니 무엇인가 작동해서 결과물을 만들어 내는 것 같긴 하다. 그리고 SVM은 실제로 결과물을 만들어낸다. SVM의 결과물은 바로 두 가지 범주를 가지는 표본을 분류하는 분류경계면이다. 그리고 이 Machine의 분류경계면을 지지해주는(Support) 요소들이 바로 Support Vector 이다.
 
 1. Margin의 최대화를 통한 구조적 위험 감소
+
 예측 모델은 크게 두 가지 성능에 기반하여 평가된다. 하나는 예측의 정확도이고, 다른 하나는 메커니즘의 복잡도이다. 같은 정확도면 복잡도가 낮은 모델이 연산시간 측면에서도 당연히 효율적이고, 일반화 측면에서도 성능이 좋다. 복잡한 모델은 training error를 최소화할 수 있지만, overfit이 발생하므로 그 모델의 일반화가 어렵다. 
 
 ![structural_risk](https://user-images.githubusercontent.com/106015570/198205512-0146f627-3790-4e66-8fa5-1a1ead44554e.png)
@@ -45,6 +46,7 @@ SVM의 기본 형태이자, 가장 이상적인 상황은 linearly separable & h
 모델링 과정은 크게 데이터셋 전처리, 분류경계면 구성 및 결과도출, 차원축소 후 분류경계면 구성 및 결과도출, 다른 모델(로지스틱 분석)과의 비교로 구성된다.
 
 1. 데이터셋 전처리
+
 전처리 과정은 다음과 같이 진행되었다. 가장 먼저, 독립변수(X)들의 결측여부와, 변수특성(명목, 연속 등)을 파악하였다. 분석 결과 모든 X는 결측값 없는 연속변수들로 구성되어 있었다. 따라서, 명목변수에 대한 별도의 dummy variable 생성 과정은 필요하지 않다.
 
 (그림삽입예정)
